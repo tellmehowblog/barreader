@@ -9,14 +9,14 @@
         $(document).ready(function(){
             $(this).mmpBarcodeReader();
             $(this).bind('start.mmp.barcodereader', function(e){
-                $("#result").html('start'+ e);
+                $('#result').html('start'+ e);
             });
             $(this).bind('end.mmp.barcodereader', function(e, st){
                 console.log('end', e, st);
                 $('body').append(st + '<br>');
             });
             $(this).bind('char.mmp.barcodereader', function(e, ch){
-			 $("#result").html('char'+ e+" ch:" ch);
+			 $('#result').html('char'+ e+' ch:' ch);
                
             });
         });
